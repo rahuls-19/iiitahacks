@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+		<title>Ungli | against corruption</title>
+		
+		<link rel="stylesheet" href="css/index.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+
+
+.slideshow-container {
+	width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 400px) {
+  .text {font-size: 11px}
+}
+</style>
+<body>
+
+		 <nav>
+			<ul>
+				<li><a class= "about " href="about.html">About</a></li>
+				
+			
+		
+						<li><a class= "spam" href="1.jpg">
+							<img src="" alt="" class="selected">
+							spam
+						</a></li>
+						<li><a class="hidden" href="1.jpg">
+							<img src="" alt="">
+							hidden heroes
+						</a></li>
+					
+						<li><a class="stats" href="2.jpg">
+							<img src="" alt="">
+							stats of corruption
+						</a></li>
+						<li><a class="images" href="2.jpg">
+							<img src="" alt="">
+							images
+						</a></li>
+						</ul>
+			</nav>	
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade" >
+  <div class="numbertext">1 / 3</div>
+  <img src="1.jpg" style="height:520px;width:100%" style="width:1600px">
+  <div class="text">Caption One</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="2.jpg" style="height:520px;width:100%" style="width:1600px">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="3.jpg" style="height:520px;width:100%" style="width:1600px" >
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+}
+</script>
+
+</body>
+
